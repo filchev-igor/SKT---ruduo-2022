@@ -1,20 +1,5 @@
-import {getProducts} from "../api/products";
-
-/*
-const tableHead = productList?.map(({products: {
-        category,
-        image,
-        name,
-        price,
-        quantity
-    } : {category: string;
-        image: string;
-        name: string;
-        price: number;
-        quantity: number}}) => {
-
-    });
- */
+import {getProducts} from "../../api/products";
+import "./ProductsTableStyle.css"
 
 export const ProductsTable = async () => {
     const productList = await getProducts();
@@ -26,7 +11,7 @@ export const ProductsTable = async () => {
     const tableHead = Object
         .keys(goodCharacteristics)
         .map((value: string | number) => {
-            return `<th>${value}</th>`;
+            return `<th class="th">${value}</th>`;
         })
         .join('');
 
@@ -36,15 +21,15 @@ export const ProductsTable = async () => {
         .map((obj: object) => {
             const tableBodyColumns = Object
                 .values(obj)
-                .map(value => `<td>${value}</td>`)
+                .map(value => `<td class="td">${value}</td>`)
                 .join('');
 
-            return `<tr>${tableBodyColumns}</tr>`;
+            return `<tr class="tr">${tableBodyColumns}</tr>`;
         })
         .join('');
 
     return `
-        <table>
+        <table class="table">
             <thead>
                 <tr>
                     ${tableHead}
