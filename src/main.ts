@@ -1,4 +1,5 @@
 import './style.css'
+import {ProductsTable} from "./components/ProductsTable";
 
 /*
 import typescriptLogo from './typescript.svg'
@@ -25,3 +26,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
 */
 
+
+
+
+ProductsTable().then(table => {
+    document.querySelector<HTMLDivElement>('#app')!.innerHTML = table;
+});
