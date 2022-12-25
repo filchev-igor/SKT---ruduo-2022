@@ -1,0 +1,56 @@
+{
+  "categories": [
+    {
+      "name": "Maisto produktai",
+      "products": [
+        {
+          "name": "Duona",
+          "price": 2.50,
+          "image": "https://example.com/bread.jpg",
+          "quantity": 20,
+          "category": "Maisto produktai"
+        },
+        {
+          "name": "Sūris",
+          "price": 5.00,
+          "image": "https://example.com/cheese.jpg",
+          "quantity": 10,
+          "category": "Maisto produktai"
+        },
+        {
+          "name": "Mėsa",
+          "price": 10.00,
+          "image": "https://example.com/meat.jpg",
+          "quantity": 5,
+          "category": "Maisto produktai"
+        }
+      ]
+    },
+    {
+      "name": "Elektronika",
+      "products": [
+        {
+          "name": "Telefonas",
+          "price": 500.00,
+          "image": "https://example.com/phone.jpg",
+          "quantity": 10,
+          "category": "Elektronika"
+        },
+        {
+          "name": "Planšetinis kompiuteris",
+          "price": 700.00,
+          "image": "https://example.com/tablet.jpg",
+          "quantity": 5,
+          "category": "Elektronika"
+        },
+        {
+          "name": "Televizorius",
+          "price": 1000.00,
+          "image": "https://example.com/tv.jpg",
+          "quantity": 2,
+          "category": "Elektronika"
+        }
+      ]
+    }
+  ]
+}
