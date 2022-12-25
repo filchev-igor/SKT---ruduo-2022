@@ -1,23 +1,13 @@
-import {getProducts} from "../../api/products";
-import "./ProductsTableStyle.css"
+import "./Products.css"
 
-export const ProductsTable = async () => {
-    const productList = await getProducts();
-
-    console.log(productList);
-
-    const goodCharacteristics = productList?.[0]?.products?.[0];
-
-    const tableHead = Object
-        .keys(goodCharacteristics)
+export const ProductsTable = ({headers, productsList} : {headers : string[], productsList: object[]}) => {
+    const tableHead = headers
         .map((value: string | number) => {
             return `<th class="th">${value}</th>`;
         })
         .join('');
 
-    const tableBody = productList
-        .map(({products} : {products : object}) => products)
-        .flat()
+    let tableBody = productsList
         .map((obj: object) => {
             const tableBodyColumns = Object
                 .values(obj)
@@ -35,6 +25,7 @@ export const ProductsTable = async () => {
                     ${tableHead}
                 </tr>
             </thead>
+            
             <tbody>
                 ${tableBody}
             </tbody>
